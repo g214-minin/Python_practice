@@ -3,7 +3,6 @@ from random import randint
 
 numbers_pos = []
 numbers_neg = []
-sum_pos_neg = []
 
 for i in range(15):
 
@@ -14,9 +13,6 @@ for i in range(15):
     numbers_neg.append(random_number_neg)
 
 print(f"Массив с положительными числами = {numbers_pos}\nМассив с отрицательными числами = {numbers_neg}")
-
-sum_pos_neg = map(sum, zip(numbers_pos, numbers_neg))
-print(f"Сумма двух массивов каждого элемента = {list(sum_pos_neg)}")
-
-# map() используется для применения функции к каждому элементу итерируемого объекта
-# Функция zip() в Python создает итератор, который объединяет элементы из нескольких источников данных
+sum_pos = sum(numbers_pos)
+sum_neg = sum(numbers_neg)
+print(f"Сумма положительного массива = {sum_pos}\nСумма отрицательного массива = {sum_neg}")
